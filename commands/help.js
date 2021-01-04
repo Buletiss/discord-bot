@@ -2,7 +2,7 @@ const execute = (bot, msg, args) => {
   let string = '==Ajuda==';
   bot.commands.forEach((command) => {
     if (command.help) {
-      string += `**${process.env.PREFIX}${command.name}** : ${process.env.PREFIX}${commmand.help}`;
+      string += `**${process.env.PREFIX}${command.name}** : ${command.help}`;
     }
   });
   return msg.channel.send(string);
